@@ -1,0 +1,177 @@
+{/***************************************************************************
+                          uCharacter.pas  -  description
+                             -------------------
+    begin                : Wed Jan 28 2014
+    copyright            : (C) 2014 by Enrique Fuentes
+    email                : deejaykike@gmail.com
+ ***************************************************************************/
+
+/***************************************************************************
+ *                                                                         *
+ *   This program is free software; you can redistribute it and/or modify  *
+ *   it under the terms of the GNU General Public License as published by  *
+ *   the Free Software Foundation; either version 2 of the License, or     *
+ *   (at your option) any later version.                                   *
+ *                                                                         *
+ ***************************************************************************/
+ }
+
+unit uCharacter;
+
+interface
+
+uses
+  uDepletablePoints,
+  uArmour,
+  uWeapon,
+  uInventoryType,
+  uDice,
+  System.SysUtils,
+  uStatus;
+
+type
+
+TCharacterType = (Fighter = 0, Paladin, Ranger, Mage, Cleric, Druid, Thief, Bard);
+TRaceType = (Human = 0, Dwarf, Elf, HalfElf, Halfling, Gnome);
+
+TCharacter = class(TObject)
+  private
+    fname: string;
+    pTHACO: Integer;
+    pHP: TDepletablePoints;
+    pWeapon: TWeapon;
+    pArmour: TArmour;
+    pStatus: TStatus;
+    pLastAttack: Integer;
+    //pBackpack: TInventoryList;
+    function GetTHACO : Integer;
+    function Alive: Boolean;
+    function GetHP: string;
+  public
+    property THACO: Integer read GetTHACO;
+    property AMAlive: Boolean read Alive;
+    property Name: string read fname;
+    property HP: string read GetHP;
+    property LastAttack: Integer read pLastAttack;
+    constructor Create(initialWeapon: TWeapon; initialArmour: TArmour; Name: string);
+    destructor Destroy;
+    function attackRoll(const Target: TCharacter): Boolean;
+    function doDamage(const Target: TCharacter): Integer;
+    function GetAC: Integer; overload;
+    function GetAC(const DamageType: Integer): Integer; overload;
+    function LoseHP(const Amount: Integer): Integer;
+    function Attack(Target: TCharacter): Boolean;
+    function RollInitiative: Integer;
+    procedure Equip(Item: TInventoryItem);
+end;
+
+
+implementation
+
+constructor TCharacter.Create(initialWeapon: TWeapon; initialArmour: TArmour; Name: string);
+begin
+  inherited Create;
+  fname:=Name;
+  pStatus:=TStatus.Create(VALID);
+  Randomize;
+  pHP:=TDepletablePoints.Create(Random(40));
+  pTHACO:=20;
+  pWeapon:=initialWeapon;
+  pArmour:=initialArmour;
+end;
+
+destructor TCharacter.Destroy;
+begin
+  pWeapon:=nil;
+  pArmour:=nil;
+  inherited;
+end;
+
+function TCharacter.Attack(Target: TCharacter): Boolean;
+begin
+  if attackRoll(Target) then
+  begin
+    pLastAttack:=doDamage(Target);
+    Result:=True;
+  end;
+end;
+
+function TCharacter.attackRoll(const Target: TCharacter): Boolean;
+var
+  tohit, roll: Integer;
+begin
+  tohit:=GetTHACO - Target.GetAC(Integer(pWeapon.DT));
+  roll:=TDice.Dice(1,20,0);
+  if roll = 20 then Result:=True
+  else if roll = 1 then Result:=False
+  else Result:=(roll > tohit);
+end;
+
+function TCharacter.doDamage(const Target: TCharacter): Integer;
+var
+  Damage: Integer;
+begin
+  Damage:=pWeapon.returnDamage;
+  Target.LoseHP(Damage);
+  Result:=Damage;
+end;
+
+function TCharacter.LoseHP(const Amount: Integer): Integer;
+begin
+  pHP.Decr(Amount);
+  if not pHP.IsPositive then
+  begin
+    pStatus.clearFlag(TStatusTypes.VALID);
+    pStatus.setFlag(TStatusTypes.UNCONSCIOUS);
+  end
+  else if pHP.Current <= -10 then
+  begin
+    pStatus.clearFlag(TStatusTypes.Valid);
+    pStatus.setFlag(TStatusTypes.Dead);
+  end;
+  Result:=pHP.Current;
+end;
+
+function TCharacter.GetTHACO;
+begin
+  Result:=pTHACO + pWeapon.getPluses;
+end;
+
+function TCharacter.Alive: Boolean;
+begin
+  Result:=pStatus.checkFlah(TStatusTypes.VALID) or pStatus.checkFlah(TStatusTypes.UNCONSCIOUS);
+end;
+
+function TCharacter.GetAC(const DamageType: Integer): Integer;
+begin
+  Result:=pArmour.getAC(TDamageTypes(DamageType));
+end;
+
+function TCharacter.GetAC: Integer;
+begin
+  Result:=pArmour.getAC;
+end;
+
+function TCharacter.RollInitiative: Integer;
+begin
+  Result:=TDice.Dice(1,10,0) + pWeapon.Speed;
+end;
+
+procedure TCharacter.Equip(Item: TInventoryItem);
+begin
+  if Item.isEquippable then
+  begin
+     if Item is TArmour then pArmour:=Item as TArmour
+     else if Item is TWeapon then pWeapon:=item as TWeapon;
+
+  end;
+
+end;
+
+function TCharacter.GetHP: string;
+begin
+  Result:=inttostr(pHP.Current);
+
+end;
+
+end.

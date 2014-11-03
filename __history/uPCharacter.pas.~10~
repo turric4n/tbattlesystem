@@ -1,0 +1,187 @@
+unit uPCharacter;
+
+{/***************************************************************************
+                          uPCharacter.pas  -  description
+                             -------------------
+    begin                : Wed Jan 28 2014
+    copyright            : (C) 2014 by Enrique Fuentes
+    email                : deejaykike@gmail.com
+ ***************************************************************************/
+
+/***************************************************************************
+ *                                                                         *
+ *   This program is free software; you can redistribute it and/or modify  *
+ *   it under the terms of the GNU General Public License as published by  *
+ *   the Free Software Foundation; either version 2 of the License, or     *
+ *   (at your option) any later version.                                   *
+ *                                                                         *
+ ***************************************************************************/
+ }
+
+interface
+
+uses
+  uCharacter,
+  uDice,
+  uAttribs,
+  uWeapon,
+  uArmour,
+  System.SysUtils;
+
+type
+
+TClasse = (Fighter, Paladin, Ranger, Mage, Cleric, Druid, Thief, Bard);
+
+TRace = (Human, Dwarf, Elf, HalfElf, Halfling, Gnome);
+
+TPCharacter = class(TCharacter)
+  private
+    fStr: TStrengthAttrib ;
+    fDex: TDexterityAttrib ;
+    fCon: TConstitutionAttrib ;
+    fInt: TIntelligenceAttrib ;
+    fWis: TWisdomAttrib ;
+    fCha: TCharismaAttrib ;
+    fDexACAdj, fConHPAdj: Integer;
+    fRace: TRace;
+    fClass: TClasse;
+    fLevel, fXPEarned: Integer;
+    function HitPoints: Integer;
+    function checkClass(aClass: TClasse): Boolean;
+    function verifyRace(aRace: TRace): Boolean;
+    function verifyClass(aClass: TClasse): Boolean;
+    function GetTHACO : Integer; virtual;
+    class function min(x,y: Integer): Integer; static;
+    class function max(x,y: Integer): Integer; static;
+  public
+    constructor Create(IntendedRace: TRace; IntendedClass: TClass; initialWeapon: TWeapon; initialArmour: TArmour; startingLevel: Integer; Name: string);
+    function GetAC: Integer; overload; virtual;
+    function GetAC(const DamageType: Integer): Integer; overload; virtual;
+    function doDamage(const Target: TCharacter): Integer; virtual;
+    function haveClass: Boolean;
+    function earnXP(amount: Integer): Integer;
+end;
+
+implementation
+
+class function TPCharacter.min(x,y: Integer): Integer;
+begin
+  if x < y then Result:=x
+  else Result:=y;
+end;
+class function TPCharacter.max(x,y: Integer): Integer;
+begin
+  if x > y then Result:=x
+  else Result:=y;
+end;
+
+constructor TPCharacter.Create(IntendedRace: TRace; IntendedClass: TClass; initialWeapon: TWeapon; initialArmour: TArmour; startingLevel: Integer; Name: string);
+begin
+  inherited Create(initialWeapon,initialArmour,Name);
+  fstr.Current:=TDice.Dice(3,6,0);
+  fdex.Current:=TDice.Dice(3,6,0);
+  fcon.Current:=TDice.Dice(3,6,0);
+  fInt.Current:=TDice.Dice(3,6,0);
+  fWis.Current:=TDice.Dice(3,6,0);
+  fCha.Current:=TDice.Dice(3,6,0);
+
+
+end;
+
+function TPCharacter.GetTHACO;
+begin
+  Result:=THACO + fDex.dexACMod;
+end;
+
+function TPCharacter.GetAC(const DamageType: Integer): Integer;
+begin
+  Result:=pArmour.getAC(TDamageTypes(DamageType) + fDex.dexACMod);
+end;
+
+function TPCharacter.GetAC: Integer;
+begin
+  Result:=TCharacter.getAC + fDex.dexACMod;
+end;
+
+function TPCharacter.doDamage(const Target: TCharacter): Integer;
+var
+  Damage: Integer;
+begin
+  Damage:=pWeapon.returnDamage;
+  Target.LoseHP(Damage);
+  Result:=Damage;
+end;
+
+function TPCharacter.checkClass(aClass: TClasse): Boolean;
+begin
+  case aClass of
+    Fighter: Result:=True ;
+    Paladin: Result:=fRace = TRace.Human;
+    Ranger: Result:=(fRace = TRace.Human) or (fRace = TRace.Elf) or (fRace = TRace.HalfElf) ;
+    Mage: Result:=(fRace = TRace.Human) or (fRace = TRace.Elf) or (fRace = TRace.HalfElf) ;
+    Cleric: Result:=True ;
+    Druid: Result:=(fRace = TRace.Human) or (fRace = TRace.Elf) ;
+    Thief: Result:=True ;
+    Bard: ;
+  end;
+
+end;
+
+function TPCharacter.verifyRace(aRace: TRace): Boolean;
+begin
+  case aRace of
+    Human: Result:=True;
+    Dwarf:
+    begin
+      fCon:=Max(11, fCon.Current);
+      fStr:=Max(8,fStr.Current);
+      fCha:=Min(17,fCha.Current);
+      Inc(fCon);
+      Dec(fCha);
+      fCon.MakeNormal;
+      fStr.MakeNormal;
+      fCha.MakeNormal;
+      Result:=True;
+    end;
+    Elf:
+    begin
+      fDex:=Max(6, fDex.Current);
+      fDex.MakeNormal;
+      fCon:=Max(7, fCon.Current);
+      fCon.MakeNormal;
+      fInt:=max(8, fInt.Current);
+      fInt.MakeNormal;
+      fCha:=Max(8, fCha.Current);
+      fCha.MakeNormal;
+      Inc(fCon);
+      Dec(fCha);
+      fCon.MakeNormal;
+      fStr.MakeNormal;
+      fCha.MakeNormal;
+      Result:=True;
+    end;
+    HalfElf:
+    begin
+      fDex:=Max(6, fDex.Current);
+      fCon:=
+    end;
+    Halfling: ;
+    Gnome: ;
+  end;
+
+end;
+
+function TPCharacter.verifyClass(aClass: TClasse): Boolean;
+begin
+
+end;
+
+function TPCharacter.earnXP(amount: Integer): Integer;
+begin
+  Inc(fXPEarned,Amount);
+  Result:=fXPEarned;
+end;
+
+
+
+end.

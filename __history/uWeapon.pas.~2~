@@ -1,0 +1,17 @@
+unit uWeapon;
+
+interface
+
+uses
+  uInventoryType,
+  uDice;
+
+  type
+    TWeapon = class(TInventoryItem)
+
+    end;
+implementation
+
+
+
+end.

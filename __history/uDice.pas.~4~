@@ -1,0 +1,124 @@
+{/***************************************************************************
+                          uDice.pas  -  description
+                             -------------------
+    begin                : Wed Jan 28 2014
+    copyright            : (C) 2014 by Enrique Fuentes
+    email                : deejaykike@gmail.com
+ ***************************************************************************/
+
+/***************************************************************************
+ *                                                                         *
+ *   This program is free software; you can redistribute it and/or modify  *
+ *   it under the terms of the GNU General Public License as published by  *
+ *   the Free Software Foundation; either version 2 of the License, or     *
+ *   (at your option) any later version.                                   *
+ *                                                                         *
+ ***************************************************************************/
+ }
+
+unit uDice;
+
+interface
+
+type
+
+TDice = class(TObject)
+  private
+    pQuantity: Char;
+    pSides: Char;
+    pModifier: ShortInt;
+    function getNumDice: Char;
+    procedure setNumDice(NumDice: Char);
+    function getSides: Char;
+    procedure setSides(NumDice: Char);
+    function getMod: Integer;
+    procedure setMod(newMod: ShortInt);
+  public
+    constructor Create; override; overload;
+    constructor Create(number,polygonNo: Char; bonus: ShortInt);
+    constructor Create(polyNo: Char);
+    property NumDice: Char read getNumDice write setNumDice;
+    property Sides: Char read getSides write setSides;
+    property Modifier: Integer read getMod write setMod;
+    procedure Roll;
+    class function Random(num: Integer): Integer; static;
+    class function Dice(n,sides: Char; modifier: ShortInt): LongInt;
+    class function Percentile: Integer;
+    class function xd6(x: Char): Integer;
+    class procedure Randomize;
+end;
+
+
+implementation
+
+constructor TDice.Create;
+begin
+  inherited;
+end;
+
+constructor TDice.Create(number: Char; polygonNo: Char; bonus: ShortInt);
+begin
+  inherited;
+end;
+
+function TDice.getNumDice: Char;
+begin
+
+end;
+
+procedure TDice.setNumDice(NumDice: Char);
+begin
+
+end;
+
+function TDice.getSides: Char;
+begin
+
+end;
+
+procedure TDice.setSides(NumDice: Char);
+begin
+
+end;
+
+function TDice.getMod: Integer;
+begin
+
+end;
+
+procedure TDice.setMod(newMod: ShortInt);
+begin
+
+end;
+
+procedure TDice.Roll;
+begin
+
+end;
+
+function TDice.Random(num: Integer): Integer;
+begin
+
+end;
+
+function TDice.Dice(n,sides: Char; modifier: ShortInt): LongInt;
+begin
+
+end;
+
+function TDice.Percentile: Integer;
+begin
+
+end;
+
+function TDice.xd6(x: Char): Integer;
+begin
+
+end;
+
+procedure TDice.Randomize;
+begin
+
+end;
+
+end.
