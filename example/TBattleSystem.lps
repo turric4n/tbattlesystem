@@ -1,0 +1,254 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CONFIG>
+  <ProjectSession>
+    <PathDelim Value="\"/>
+    <Version Value="9"/>
+    <BuildModes Active="Default"/>
+    <Units Count="14">
+      <Unit0>
+        <Filename Value="TBattleSystem.lpr"/>
+        <IsPartOfProject Value="True"/>
+        <TopLine Value="36"/>
+        <CursorPos X="9" Y="68"/>
+        <UsageCount Value="22"/>
+        <Loaded Value="True"/>
+        <DefaultSyntaxHighlighter Value="Delphi"/>
+      </Unit0>
+      <Unit1>
+        <Filename Value="uCharacter.pas"/>
+        <EditorIndex Value="-1"/>
+        <TopLine Value="53"/>
+        <CursorPos X="106" Y="76"/>
+        <UsageCount Value="10"/>
+        <DefaultSyntaxHighlighter Value="Delphi"/>
+      </Unit1>
+      <Unit2>
+        <Filename Value="uDice.pas"/>
+        <EditorIndex Value="-1"/>
+        <CursorPos X="3" Y="24"/>
+        <UsageCount Value="10"/>
+        <DefaultSyntaxHighlighter Value="Delphi"/>
+      </Unit2>
+      <Unit3>
+        <Filename Value="uInventoryList.pas"/>
+        <EditorIndex Value="-1"/>
+        <CursorPos X="6" Y="8"/>
+        <UsageCount Value="10"/>
+        <DefaultSyntaxHighlighter Value="Delphi"/>
+      </Unit3>
+      <Unit4>
+        <Filename Value="C:\codetyphon\fpcsrc\rtl\objpas\fgl.pp"/>
+        <UnitName Value="fgl"/>
+        <EditorIndex Value="2"/>
+        <TopLine Value="82"/>
+        <CursorPos X="14" Y="183"/>
+        <UsageCount Value="10"/>
+        <Loaded Value="True"/>
+      </Unit4>
+      <Unit5>
+        <Filename Value="uItemLib.pas"/>
+        <EditorIndex Value="-1"/>
+        <CursorPos X="27" Y="37"/>
+        <UsageCount Value="10"/>
+        <DefaultSyntaxHighlighter Value="Delphi"/>
+      </Unit5>
+      <Unit6>
+        <Filename Value="uPCharacter.pas"/>
+        <EditorIndex Value="-1"/>
+        <TopLine Value="21"/>
+        <CursorPos X="3" Y="30"/>
+        <UsageCount Value="10"/>
+        <DefaultSyntaxHighlighter Value="Delphi"/>
+      </Unit6>
+      <Unit7>
+        <Filename Value="..\src\uPCharacter.pas"/>
+        <UnitName Value="uPCharacter"/>
+        <EditorIndex Value="-1"/>
+        <TopLine Value="221"/>
+        <CursorPos X="13" Y="241"/>
+        <UsageCount Value="11"/>
+        <DefaultSyntaxHighlighter Value="Delphi"/>
+      </Unit7>
+      <Unit8>
+        <Filename Value="..\src\uWeapon.pas"/>
+        <UnitName Value="uWeapon"/>
+        <IsVisibleTab Value="True"/>
+        <EditorIndex Value="6"/>
+        <TopLine Value="25"/>
+        <CursorPos X="19" Y="33"/>
+        <UsageCount Value="11"/>
+        <Loaded Value="True"/>
+        <DefaultSyntaxHighlighter Value="Delphi"/>
+      </Unit8>
+      <Unit9>
+        <Filename Value="..\src\uInventoryList.pas"/>
+        <UnitName Value="uInventoryList"/>
+        <EditorIndex Value="5"/>
+        <UsageCount Value="11"/>
+        <Loaded Value="True"/>
+        <DefaultSyntaxHighlighter Value="Delphi"/>
+      </Unit9>
+      <Unit10>
+        <Filename Value="..\src\uArmour.pas"/>
+        <UnitName Value="uArmour"/>
+        <EditorIndex Value="4"/>
+        <TopLine Value="90"/>
+        <CursorPos X="7" Y="33"/>
+        <UsageCount Value="11"/>
+        <Loaded Value="True"/>
+        <DefaultSyntaxHighlighter Value="Delphi"/>
+      </Unit10>
+      <Unit11>
+        <Filename Value="..\src\uItemLib.pas"/>
+        <UnitName Value="uItemLib"/>
+        <EditorIndex Value="3"/>
+        <CursorPos X="57" Y="58"/>
+        <UsageCount Value="11"/>
+        <Loaded Value="True"/>
+        <DefaultSyntaxHighlighter Value="Delphi"/>
+      </Unit11>
+      <Unit12>
+        <Filename Value="C:\codetyphon\typhon\components\lazdebuggergdbmi\gdbmidebugger.pp"/>
+        <EditorIndex Value="-1"/>
+        <TopLine Value="12913"/>
+        <CursorPos X="24" Y="13001"/>
+        <UsageCount Value="10"/>
+      </Unit12>
+      <Unit13>
+        <Filename Value="..\src\uCharacter.pas"/>
+        <UnitName Value="uCharacter"/>
+        <EditorIndex Value="1"/>
+        <TopLine Value="45"/>
+        <CursorPos X="5" Y="51"/>
+        <UsageCount Value="10"/>
+        <Loaded Value="True"/>
+        <DefaultSyntaxHighlighter Value="Delphi"/>
+      </Unit13>
+    </Units>
+    <JumpHistory Count="28" HistoryIndex="27">
+      <Position1>
+        <Filename Value="TBattleSystem.lpr"/>
+        <Caret Line="37" Column="41" TopLine="17"/>
+      </Position1>
+      <Position2>
+        <Filename Value="TBattleSystem.lpr"/>
+        <Caret Line="38" Column="39" TopLine="17"/>
+      </Position2>
+      <Position3>
+        <Filename Value="TBattleSystem.lpr"/>
+        <Caret Line="54" Column="22" TopLine="25"/>
+      </Position3>
+      <Position4>
+        <Filename Value="TBattleSystem.lpr"/>
+        <Caret Line="25" Column="36"/>
+      </Position4>
+      <Position5>
+        <Filename Value="TBattleSystem.lpr"/>
+        <Caret Line="52" Column="77" TopLine="28"/>
+      </Position5>
+      <Position6>
+        <Filename Value="TBattleSystem.lpr"/>
+        <Caret Line="57" Column="34" TopLine="28"/>
+      </Position6>
+      <Position7>
+        <Filename Value="TBattleSystem.lpr"/>
+        <Caret Line="17" Column="15"/>
+      </Position7>
+      <Position8>
+        <Filename Value="TBattleSystem.lpr"/>
+        <Caret Line="52" Column="81" TopLine="40"/>
+      </Position8>
+      <Position9>
+        <Filename Value="TBattleSystem.lpr"/>
+        <Caret Line="59" Column="61" TopLine="31"/>
+      </Position9>
+      <Position10>
+        <Filename Value="TBattleSystem.lpr"/>
+        <Caret Line="53" Column="91" TopLine="31"/>
+      </Position10>
+      <Position11>
+        <Filename Value="TBattleSystem.lpr"/>
+        <Caret Line="51" Column="62" TopLine="31"/>
+      </Position11>
+      <Position12>
+        <Filename Value="TBattleSystem.lpr"/>
+        <Caret Line="64" Column="54" TopLine="33"/>
+      </Position12>
+      <Position13>
+        <Filename Value="TBattleSystem.lpr"/>
+        <Caret Line="59" Column="37" TopLine="39"/>
+      </Position13>
+      <Position14>
+        <Filename Value="..\src\uArmour.pas"/>
+        <Caret Line="72" Column="55" TopLine="66"/>
+      </Position14>
+      <Position15>
+        <Filename Value="TBattleSystem.lpr"/>
+        <Caret Line="59" Column="37" TopLine="39"/>
+      </Position15>
+      <Position16>
+        <Filename Value="TBattleSystem.lpr"/>
+        <Caret Line="46" Column="9" TopLine="35"/>
+      </Position16>
+      <Position17>
+        <Filename Value="TBattleSystem.lpr"/>
+        <Caret Line="100" Column="21" TopLine="68"/>
+      </Position17>
+      <Position18>
+        <Filename Value="TBattleSystem.lpr"/>
+        <Caret Line="80" Column="36" TopLine="45"/>
+      </Position18>
+      <Position19>
+        <Filename Value="TBattleSystem.lpr"/>
+        <Caret Line="96" Column="251" TopLine="66"/>
+      </Position19>
+      <Position20>
+        <Filename Value="TBattleSystem.lpr"/>
+        <Caret Line="82" Column="15" TopLine="62"/>
+      </Position20>
+      <Position21>
+        <Filename Value="TBattleSystem.lpr"/>
+        <Caret Line="84" Column="41" TopLine="60"/>
+      </Position21>
+      <Position22>
+        <Filename Value="..\src\uCharacter.pas"/>
+        <Caret Line="134" Column="12" TopLine="119"/>
+      </Position22>
+      <Position23>
+        <Filename Value="..\src\uCharacter.pas"/>
+        <Caret Line="87" Column="14" TopLine="127"/>
+      </Position23>
+      <Position24>
+        <Filename Value="..\src\uCharacter.pas"/>
+        <Caret Line="93" Column="14" TopLine="75"/>
+      </Position24>
+      <Position25>
+        <Filename Value="..\src\uCharacter.pas"/>
+        <Caret Line="91" Column="14" TopLine="160"/>
+      </Position25>
+      <Position26>
+        <Filename Value="..\src\uCharacter.pas"/>
+        <Caret Line="51" Column="5" TopLine="45"/>
+      </Position26>
+      <Position27>
+        <Filename Value="..\src\uArmour.pas"/>
+        <Caret Line="30" Column="3" TopLine="77"/>
+      </Position27>
+      <Position28>
+        <Filename Value="TBattleSystem.lpr"/>
+        <Caret Line="68" Column="9" TopLine="36"/>
+      </Position28>
+    </JumpHistory>
+  </ProjectSession>
+  <Debugging>
+    <BreakPoints Count="1">
+      <Item1>
+        <Kind Value="bpkSource"/>
+        <WatchScope Value="wpsLocal"/>
+        <WatchKind Value="wpkWrite"/>
+        <Source Value="TBattleSystem.lpr"/>
+        <Line Value="88"/>
+      </Item1>
+    </BreakPoints>
+  </Debugging>
+</CONFIG>
