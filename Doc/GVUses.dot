@@ -1,0 +1,42 @@
+DiGraph Uses {
+  "uArmour" -> "uInventoryType"
+  "uArmour" [href="uArmour.html"]
+  "uAttribs" -> "uRenormalizablePoints"
+  "uAttribs" [href="uAttribs.html"]
+  "uCharacter" -> "uDepletablePoints"
+  "uCharacter" -> "uArmour"
+  "uCharacter" -> "uWeapon"
+  "uCharacter" -> "uInventoryType"
+  "uCharacter" -> "uDice"
+  "uCharacter" -> "SysUtils"
+  "uCharacter" -> "uStatus"
+  "uCharacter" [href="uCharacter.html"]
+  "uDepletablePoints" [href="uDepletablePoints.html"]
+  "uDice" -> "SysUtils"
+  "uDice" [href="uDice.html"]
+  "uInventoryList" -> "Classes"
+  "uInventoryList" -> "uInventoryType"
+  "uInventoryList" -> "fgl"
+  "uInventoryList" [href="uInventoryList.html"]
+  "uInventoryType" [href="uInventoryType.html"]
+  "uItemLib" -> "uInventoryList"
+  "uItemLib" -> "uInventoryType"
+  "uItemLib" -> "uArmour"
+  "uItemLib" -> "fgl"
+  "uItemLib" -> "uWeapon"
+  "uItemLib" [href="uItemLib.html"]
+  "uMoneyHolder" [href="uMoneyHolder.html"]
+  "uPCharacter" -> "uCharacter"
+  "uPCharacter" -> "uDice"
+  "uPCharacter" -> "uAttribs"
+  "uPCharacter" -> "uWeapon"
+  "uPCharacter" -> "uArmour"
+  "uPCharacter" -> "uInventoryType"
+  "uPCharacter" -> "SysUtils"
+  "uPCharacter" [href="uPCharacter.html"]
+  "uRenormalizablePoints" [href="uRenormalizablePoints.html"]
+  "uStatus" [href="uStatus.html"]
+  "uWeapon" -> "uInventoryType"
+  "uWeapon" -> "uDice"
+  "uWeapon" [href="uWeapon.html"]
+}

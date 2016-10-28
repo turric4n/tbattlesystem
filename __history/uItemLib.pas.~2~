@@ -1,0 +1,26 @@
+unit uItemLib;
+
+interface
+
+uses
+  uInventoryList,
+  uInventoryType,
+  uArmour,
+  System.Generics.Collections,
+  uWeapon;
+
+type
+  TItemLibrary = class(TObject)
+    private
+      fWeaponDB : TObjectList<TWeapon>;
+      fArmorDB : TObjectList<TArmour>;
+    public
+      constructor Create; overload;
+      function NewArmor(Model: TArmorType): TArmour;
+    end;
+
+implementation
+
+
+
+end.

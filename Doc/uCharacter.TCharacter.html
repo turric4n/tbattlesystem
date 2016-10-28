@@ -1,0 +1,449 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/1999/REC-html401-19991224/loose.dtd">
+<html>
+<head>
+<title>TBattleSystem: uCharacter: Class TCharacter</title>
+<meta name="generator" content="PasDoc 0.13.0">
+<meta http-equiv="content-type" content="text/html; charset=iso-8859-1">
+<link rel="StyleSheet" type="text/css" href="pasdoc.css">
+</head>
+<body>
+<table class="container"><tr><td class="navigation">
+<h2>TBattleSystem</h2><p><a href="AllUnits.html" class="navigation">Units</a></p><p><a href="ClassHierarchy.html" class="navigation">Class Hierarchy</a></p><p><a href="AllClasses.html" class="navigation">Classes, Interfaces, Objects and Records</a></p><p><a href="AllTypes.html" class="navigation">Types</a></p><p><a href="AllVariables.html" class="navigation">Variables</a></p><p><a href="AllConstants.html" class="navigation">Constants</a></p><p><a href="AllFunctions.html" class="navigation">Functions and Procedures</a></p><p><a href="AllIdentifiers.html" class="navigation">Identifiers</a></p><p><a href="GVUses.png" class="navigation">Unit dependency graph</a></p><p><a href="GVClasses.png" class="navigation">Classes hierarchy graph</a></p></td><td class="content">
+<a name="TCharacter"></a><h1 class="cio">Class TCharacter</h1>
+<table class="sections wide_list">
+<tr>
+<td><a class="section" href="#PasDoc-Description">Description</a></td><td><a class="section" href="#PasDoc-Hierarchy">Hierarchy</a></td><td><a class="section" href="#PasDoc-Fields">Fields</a></td><td><a class="section" href="#PasDoc-Methods">Methods</a></td><td><a class="section" href="#PasDoc-Properties">Properties</a></td></tr></table>
+<a name="PasDoc-Description"></a><h2 class="unit">Unit</h2>
+<p class="unitlink">
+<a  href="uCharacter.html">uCharacter</a></p>
+<h2 class="declaration">Declaration</h2>
+<p class="declaration">
+<code>type TCharacter = class(TObject)</code></p>
+<h2 class="description">Description</h2>
+<p>
+Class base for character. All characters or monster need to derived of this class. Encapsulates all methods of character control.</p>
+<a name="PasDoc-Hierarchy"></a><h2 class="hierarchy">Hierarchy</h2>
+<ul class="hierarchy"><li class="ancestor">TObject</li>
+<li class="thisitem">TCharacter</li></ul><h2 class="overview">Overview</h2>
+<a name="PasDoc-Fields"></a><h3 class="summary">Fields</h3>
+<table class="summary wide_list">
+<tr class="list">
+<td class="visibility"><a  href="legend.html"><img  src="protected.gif" alt="Protected" title="Protected"></a></td>
+<td class="itemcode"><code><b><a  href="uCharacter.TCharacter.html#fname">fname</a></b>: string;</code></td>
+</tr>
+<tr class="list2">
+<td class="visibility"><a  href="legend.html"><img  src="protected.gif" alt="Protected" title="Protected"></a></td>
+<td class="itemcode"><code><b><a  href="uCharacter.TCharacter.html#pTHACO">pTHACO</a></b>: Integer;</code></td>
+</tr>
+<tr class="list">
+<td class="visibility"><a  href="legend.html"><img  src="protected.gif" alt="Protected" title="Protected"></a></td>
+<td class="itemcode"><code><b><a  href="uCharacter.TCharacter.html#pHP">pHP</a></b>: <a  href="uDepletablePoints.TDepletablePoints.html">TDepletablePoints</a>;</code></td>
+</tr>
+<tr class="list2">
+<td class="visibility"><a  href="legend.html"><img  src="protected.gif" alt="Protected" title="Protected"></a></td>
+<td class="itemcode"><code><b><a  href="uCharacter.TCharacter.html#pWeapon">pWeapon</a></b>: <a  href="uWeapon.TWeapon.html">TWeapon</a>;</code></td>
+</tr>
+<tr class="list">
+<td class="visibility"><a  href="legend.html"><img  src="protected.gif" alt="Protected" title="Protected"></a></td>
+<td class="itemcode"><code><b><a  href="uCharacter.TCharacter.html#pArmour">pArmour</a></b>: <a  href="uArmour.TArmour.html">TArmour</a>;</code></td>
+</tr>
+<tr class="list2">
+<td class="visibility"><a  href="legend.html"><img  src="protected.gif" alt="Protected" title="Protected"></a></td>
+<td class="itemcode"><code><b><a  href="uCharacter.TCharacter.html#pStatus">pStatus</a></b>: <a  href="uStatus.TStatus.html">TStatus</a>;</code></td>
+</tr>
+<tr class="list">
+<td class="visibility"><a  href="legend.html"><img  src="protected.gif" alt="Protected" title="Protected"></a></td>
+<td class="itemcode"><code><b><a  href="uCharacter.TCharacter.html#pLastAttack">pLastAttack</a></b>: Integer;</code></td>
+</tr>
+<tr class="list2">
+<td class="visibility"><a  href="legend.html"><img  src="protected.gif" alt="Protected" title="Protected"></a></td>
+<td class="itemcode"><code><b><a  href="uCharacter.TCharacter.html#fLastRoll">fLastRoll</a></b>: Integer;</code></td>
+</tr>
+<tr class="list">
+<td class="visibility"><a  href="legend.html"><img  src="protected.gif" alt="Protected" title="Protected"></a></td>
+<td class="itemcode"><code><b><a  href="uCharacter.TCharacter.html#fLastLostHP">fLastLostHP</a></b>: Integer;</code></td>
+</tr>
+</table>
+<a name="PasDoc-Methods"></a><h3 class="summary">Methods</h3>
+<table class="summary wide_list">
+<tr class="list">
+<td class="visibility"><a  href="legend.html"><img  src="protected.gif" alt="Protected" title="Protected"></a></td>
+<td class="itemcode"><code>function <b><a  href="uCharacter.TCharacter.html#GetTHACO">GetTHACO</a></b> : Integer; virtual;</code></td>
+</tr>
+<tr class="list2">
+<td class="visibility"><a  href="legend.html"><img  src="protected.gif" alt="Protected" title="Protected"></a></td>
+<td class="itemcode"><code>function <b><a  href="uCharacter.TCharacter.html#Alive">Alive</a></b>: Boolean;</code></td>
+</tr>
+<tr class="list">
+<td class="visibility"><a  href="legend.html"><img  src="protected.gif" alt="Protected" title="Protected"></a></td>
+<td class="itemcode"><code>function <b><a  href="uCharacter.TCharacter.html#GetHP">GetHP</a></b>: string;</code></td>
+</tr>
+<tr class="list2">
+<td class="visibility"><a  href="legend.html"><img  src="public.gif" alt="Public" title="Public"></a></td>
+<td class="itemcode"><code>constructor <b><a  href="uCharacter.TCharacter.html#Create">Create</a></b>(initialWeapon: <a  href="uWeapon.TWeapon.html">TWeapon</a>; initialArmour: <a  href="uArmour.TArmour.html">TArmour</a>; Name: string);</code></td>
+</tr>
+<tr class="list">
+<td class="visibility"><a  href="legend.html"><img  src="public.gif" alt="Public" title="Public"></a></td>
+<td class="itemcode"><code>destructor <b><a  href="uCharacter.TCharacter.html#Destroy">Destroy</a></b>;</code></td>
+</tr>
+<tr class="list2">
+<td class="visibility"><a  href="legend.html"><img  src="public.gif" alt="Public" title="Public"></a></td>
+<td class="itemcode"><code>function <b><a  href="uCharacter.TCharacter.html#attackRoll">attackRoll</a></b>(const Target: <a  href="uCharacter.TCharacter.html">TCharacter</a>): Boolean;</code></td>
+</tr>
+<tr class="list">
+<td class="visibility"><a  href="legend.html"><img  src="public.gif" alt="Public" title="Public"></a></td>
+<td class="itemcode"><code>function <b><a  href="uCharacter.TCharacter.html#doDamage">doDamage</a></b>(const Target: <a  href="uCharacter.TCharacter.html">TCharacter</a>): Integer; virtual;</code></td>
+</tr>
+<tr class="list2">
+<td class="visibility"><a  href="legend.html"><img  src="public.gif" alt="Public" title="Public"></a></td>
+<td class="itemcode"><code>function <b><a  href="uCharacter.TCharacter.html#GetAC">GetAC</a></b>: Integer; overload; virtual;</code></td>
+</tr>
+<tr class="list">
+<td class="visibility"><a  href="legend.html"><img  src="public.gif" alt="Public" title="Public"></a></td>
+<td class="itemcode"><code>function <b><a  href="uCharacter.TCharacter.html#GetAC">GetAC</a></b>(const DamageType: Integer): Integer; overload; virtual;</code></td>
+</tr>
+<tr class="list2">
+<td class="visibility"><a  href="legend.html"><img  src="public.gif" alt="Public" title="Public"></a></td>
+<td class="itemcode"><code>function <b><a  href="uCharacter.TCharacter.html#LoseHP">LoseHP</a></b>(const Amount: Integer): Integer;</code></td>
+</tr>
+<tr class="list">
+<td class="visibility"><a  href="legend.html"><img  src="public.gif" alt="Public" title="Public"></a></td>
+<td class="itemcode"><code>function <b><a  href="uCharacter.TCharacter.html#Attack">Attack</a></b>(Target: <a  href="uCharacter.TCharacter.html">TCharacter</a>): Boolean;</code></td>
+</tr>
+<tr class="list2">
+<td class="visibility"><a  href="legend.html"><img  src="public.gif" alt="Public" title="Public"></a></td>
+<td class="itemcode"><code>function <b><a  href="uCharacter.TCharacter.html#RollInitiative">RollInitiative</a></b>: Integer;</code></td>
+</tr>
+<tr class="list">
+<td class="visibility"><a  href="legend.html"><img  src="public.gif" alt="Public" title="Public"></a></td>
+<td class="itemcode"><code>procedure <b><a  href="uCharacter.TCharacter.html#Equip">Equip</a></b>(Item: <a  href="uInventoryType.TInventoryItem.html">TInventoryItem</a>);</code></td>
+</tr>
+</table>
+<a name="PasDoc-Properties"></a><h3 class="summary">Properties</h3>
+<table class="summary wide_list">
+<tr class="list">
+<td class="visibility"><a  href="legend.html"><img  src="public.gif" alt="Public" title="Public"></a></td>
+<td class="itemcode"><code>property <b><a  href="uCharacter.TCharacter.html#THACO">THACO</a></b>: Integer read <a  href="uCharacter.TCharacter.html#GetTHACO">GetTHACO</a>;</code></td>
+</tr>
+<tr class="list2">
+<td class="visibility"><a  href="legend.html"><img  src="public.gif" alt="Public" title="Public"></a></td>
+<td class="itemcode"><code>property <b><a  href="uCharacter.TCharacter.html#AMAlive">AMAlive</a></b>: Boolean read <a  href="uCharacter.TCharacter.html#Alive">Alive</a>;</code></td>
+</tr>
+<tr class="list">
+<td class="visibility"><a  href="legend.html"><img  src="public.gif" alt="Public" title="Public"></a></td>
+<td class="itemcode"><code>property <b><a  href="uCharacter.TCharacter.html#Name">Name</a></b>: string read <a  href="uCharacter.TCharacter.html#fname">fname</a>;</code></td>
+</tr>
+<tr class="list2">
+<td class="visibility"><a  href="legend.html"><img  src="public.gif" alt="Public" title="Public"></a></td>
+<td class="itemcode"><code>property <b><a  href="uCharacter.TCharacter.html#HP">HP</a></b>: string read <a  href="uCharacter.TCharacter.html#GetHP">GetHP</a>;</code></td>
+</tr>
+<tr class="list">
+<td class="visibility"><a  href="legend.html"><img  src="public.gif" alt="Public" title="Public"></a></td>
+<td class="itemcode"><code>property <b><a  href="uCharacter.TCharacter.html#LastAttack">LastAttack</a></b>: Integer read <a  href="uCharacter.TCharacter.html#pLastAttack">pLastAttack</a>;</code></td>
+</tr>
+<tr class="list2">
+<td class="visibility"><a  href="legend.html"><img  src="public.gif" alt="Public" title="Public"></a></td>
+<td class="itemcode"><code>property <b><a  href="uCharacter.TCharacter.html#LastRoll">LastRoll</a></b>: Integer read <a  href="uCharacter.TCharacter.html#fLastRoll">fLastRoll</a>;</code></td>
+</tr>
+<tr class="list">
+<td class="visibility"><a  href="legend.html"><img  src="public.gif" alt="Public" title="Public"></a></td>
+<td class="itemcode"><code>property <b><a  href="uCharacter.TCharacter.html#LastLostHP">LastLostHP</a></b>: Integer read <a  href="uCharacter.TCharacter.html#fLastRoll">fLastRoll</a>;</code></td>
+</tr>
+</table>
+<h2 class="description">Description</h2>
+<h3 class="detail">Fields</h3>
+<table class="detail wide_list">
+<tr class="list">
+<td class="visibility"><a  href="legend.html"><img  src="protected.gif" alt="Protected" title="Protected"></a></td>
+<td class="itemcode"><a name="fname"></a><code><b>fname</b>: string;</code></td>
+</tr>
+<tr><td colspan="2">
+<p>
+Name of character.</p>
+</td></tr>
+</table>
+<table class="detail wide_list">
+<tr class="list">
+<td class="visibility"><a  href="legend.html"><img  src="protected.gif" alt="Protected" title="Protected"></a></td>
+<td class="itemcode"><a name="pTHACO"></a><code><b>pTHACO</b>: Integer;</code></td>
+</tr>
+<tr><td colspan="2">
+<p>
+To hit armor class 0.</p>
+</td></tr>
+</table>
+<table class="detail wide_list">
+<tr class="list">
+<td class="visibility"><a  href="legend.html"><img  src="protected.gif" alt="Protected" title="Protected"></a></td>
+<td class="itemcode"><a name="pHP"></a><code><b>pHP</b>: <a  href="uDepletablePoints.TDepletablePoints.html">TDepletablePoints</a>;</code></td>
+</tr>
+<tr><td colspan="2">
+<p>
+Health points.</p>
+</td></tr>
+</table>
+<table class="detail wide_list">
+<tr class="list">
+<td class="visibility"><a  href="legend.html"><img  src="protected.gif" alt="Protected" title="Protected"></a></td>
+<td class="itemcode"><a name="pWeapon"></a><code><b>pWeapon</b>: <a  href="uWeapon.TWeapon.html">TWeapon</a>;</code></td>
+</tr>
+<tr><td colspan="2">
+<p>
+Equipped weapon.</p>
+</td></tr>
+</table>
+<table class="detail wide_list">
+<tr class="list">
+<td class="visibility"><a  href="legend.html"><img  src="protected.gif" alt="Protected" title="Protected"></a></td>
+<td class="itemcode"><a name="pArmour"></a><code><b>pArmour</b>: <a  href="uArmour.TArmour.html">TArmour</a>;</code></td>
+</tr>
+<tr><td colspan="2">
+<p>
+Equipped armor.</p>
+</td></tr>
+</table>
+<table class="detail wide_list">
+<tr class="list">
+<td class="visibility"><a  href="legend.html"><img  src="protected.gif" alt="Protected" title="Protected"></a></td>
+<td class="itemcode"><a name="pStatus"></a><code><b>pStatus</b>: <a  href="uStatus.TStatus.html">TStatus</a>;</code></td>
+</tr>
+<tr><td colspan="2">
+<p>
+Character status.</p>
+</td></tr>
+</table>
+<table class="detail wide_list">
+<tr class="list">
+<td class="visibility"><a  href="legend.html"><img  src="protected.gif" alt="Protected" title="Protected"></a></td>
+<td class="itemcode"><a name="pLastAttack"></a><code><b>pLastAttack</b>: Integer;</code></td>
+</tr>
+<tr><td colspan="2">
+<p>
+Last attack points.</p>
+</td></tr>
+</table>
+<table class="detail wide_list">
+<tr class="list">
+<td class="visibility"><a  href="legend.html"><img  src="protected.gif" alt="Protected" title="Protected"></a></td>
+<td class="itemcode"><a name="fLastRoll"></a><code><b>fLastRoll</b>: Integer;</code></td>
+</tr>
+<tr><td colspan="2">
+<p>
+Last roll.</p>
+</td></tr>
+</table>
+<table class="detail wide_list">
+<tr class="list">
+<td class="visibility"><a  href="legend.html"><img  src="protected.gif" alt="Protected" title="Protected"></a></td>
+<td class="itemcode"><a name="fLastLostHP"></a><code><b>fLastLostHP</b>: Integer;</code></td>
+</tr>
+<tr><td colspan="2">
+<p>
+Last lost health points.</p>
+</td></tr>
+</table>
+<h3 class="detail">Methods</h3>
+<table class="detail wide_list">
+<tr class="list">
+<td class="visibility"><a  href="legend.html"><img  src="protected.gif" alt="Protected" title="Protected"></a></td>
+<td class="itemcode"><a name="GetTHACO"></a><code>function <b>GetTHACO</b> : Integer; virtual;</code></td>
+</tr>
+<tr><td colspan="2">
+<p>
+pBackpack: TInventoryList; Method to know THAC0.</p>
+</td></tr>
+</table>
+<table class="detail wide_list">
+<tr class="list">
+<td class="visibility"><a  href="legend.html"><img  src="protected.gif" alt="Protected" title="Protected"></a></td>
+<td class="itemcode"><a name="Alive"></a><code>function <b>Alive</b>: Boolean;</code></td>
+</tr>
+<tr><td colspan="2">
+<p>
+Is player alive?</p>
+</td></tr>
+</table>
+<table class="detail wide_list">
+<tr class="list">
+<td class="visibility"><a  href="legend.html"><img  src="protected.gif" alt="Protected" title="Protected"></a></td>
+<td class="itemcode"><a name="GetHP"></a><code>function <b>GetHP</b>: string;</code></td>
+</tr>
+<tr><td colspan="2">
+<p>
+Method to get HP.</p>
+</td></tr>
+</table>
+<table class="detail wide_list">
+<tr class="list">
+<td class="visibility"><a  href="legend.html"><img  src="public.gif" alt="Public" title="Public"></a></td>
+<td class="itemcode"><a name="Create"></a><code>constructor <b>Create</b>(initialWeapon: <a  href="uWeapon.TWeapon.html">TWeapon</a>; initialArmour: <a  href="uArmour.TArmour.html">TArmour</a>; Name: string);</code></td>
+</tr>
+<tr><td colspan="2">
+<p>
+Constructor weapon &amp; armour. Needs to be overrided.</p>
+</td></tr>
+</table>
+<table class="detail wide_list">
+<tr class="list">
+<td class="visibility"><a  href="legend.html"><img  src="public.gif" alt="Public" title="Public"></a></td>
+<td class="itemcode"><a name="Destroy"></a><code>destructor <b>Destroy</b>;</code></td>
+</tr>
+<tr><td colspan="2">
+<p>
+Destructor.</p>
+</td></tr>
+</table>
+<table class="detail wide_list">
+<tr class="list">
+<td class="visibility"><a  href="legend.html"><img  src="public.gif" alt="Public" title="Public"></a></td>
+<td class="itemcode"><a name="attackRoll"></a><code>function <b>attackRoll</b>(const Target: <a  href="uCharacter.TCharacter.html">TCharacter</a>): Boolean;</code></td>
+</tr>
+<tr><td colspan="2">
+<p>
+Attack to another character. If character is hit then do damage.</p>
+</td></tr>
+</table>
+<table class="detail wide_list">
+<tr class="list">
+<td class="visibility"><a  href="legend.html"><img  src="public.gif" alt="Public" title="Public"></a></td>
+<td class="itemcode"><a name="doDamage"></a><code>function <b>doDamage</b>(const Target: <a  href="uCharacter.TCharacter.html">TCharacter</a>): Integer; virtual;</code></td>
+</tr>
+<tr><td colspan="2">
+<p>
+Do damage to another character.</p>
+</td></tr>
+</table>
+<table class="detail wide_list">
+<tr class="list">
+<td class="visibility"><a  href="legend.html"><img  src="public.gif" alt="Public" title="Public"></a></td>
+<td class="itemcode"><a name="GetAC"></a><code>function <b>GetAC</b>: Integer; overload; virtual;</code></td>
+</tr>
+<tr><td colspan="2">
+<p>
+Get Armor Class.</p>
+</td></tr>
+</table>
+<table class="detail wide_list">
+<tr class="list">
+<td class="visibility"><a  href="legend.html"><img  src="public.gif" alt="Public" title="Public"></a></td>
+<td class="itemcode"><a name="GetAC"></a><code>function <b>GetAC</b>(const DamageType: Integer): Integer; overload; virtual;</code></td>
+</tr>
+<tr><td colspan="2">
+<p>
+Get Damage type Armor Class.</p>
+</td></tr>
+</table>
+<table class="detail wide_list">
+<tr class="list">
+<td class="visibility"><a  href="legend.html"><img  src="public.gif" alt="Public" title="Public"></a></td>
+<td class="itemcode"><a name="LoseHP"></a><code>function <b>LoseHP</b>(const Amount: Integer): Integer;</code></td>
+</tr>
+<tr><td colspan="2">
+<p>
+Lose Heal Points.</p>
+</td></tr>
+</table>
+<table class="detail wide_list">
+<tr class="list">
+<td class="visibility"><a  href="legend.html"><img  src="public.gif" alt="Public" title="Public"></a></td>
+<td class="itemcode"><a name="Attack"></a><code>function <b>Attack</b>(Target: <a  href="uCharacter.TCharacter.html">TCharacter</a>): Boolean;</code></td>
+</tr>
+<tr><td colspan="2">
+<p>
+Attack to another character. If character is hit then do damage</p>
+</td></tr>
+</table>
+<table class="detail wide_list">
+<tr class="list">
+<td class="visibility"><a  href="legend.html"><img  src="public.gif" alt="Public" title="Public"></a></td>
+<td class="itemcode"><a name="RollInitiative"></a><code>function <b>RollInitiative</b>: Integer;</code></td>
+</tr>
+<tr><td colspan="2">
+<p>
+Roll initative points.</p>
+</td></tr>
+</table>
+<table class="detail wide_list">
+<tr class="list">
+<td class="visibility"><a  href="legend.html"><img  src="public.gif" alt="Public" title="Public"></a></td>
+<td class="itemcode"><a name="Equip"></a><code>procedure <b>Equip</b>(Item: <a  href="uInventoryType.TInventoryItem.html">TInventoryItem</a>);</code></td>
+</tr>
+<tr><td colspan="2">
+<p>
+Equip an Item.</p>
+</td></tr>
+</table>
+<h3 class="detail">Properties</h3>
+<table class="detail wide_list">
+<tr class="list">
+<td class="visibility"><a  href="legend.html"><img  src="public.gif" alt="Public" title="Public"></a></td>
+<td class="itemcode"><a name="THACO"></a><code>property <b>THACO</b>: Integer read <a  href="uCharacter.TCharacter.html#GetTHACO">GetTHACO</a>;</code></td>
+</tr>
+<tr><td colspan="2">
+<p>
+Get To hit armor class 0.</p>
+</td></tr>
+</table>
+<table class="detail wide_list">
+<tr class="list">
+<td class="visibility"><a  href="legend.html"><img  src="public.gif" alt="Public" title="Public"></a></td>
+<td class="itemcode"><a name="AMAlive"></a><code>property <b>AMAlive</b>: Boolean read <a  href="uCharacter.TCharacter.html#Alive">Alive</a>;</code></td>
+</tr>
+<tr><td colspan="2">
+<p>
+Get i am alive?.</p>
+</td></tr>
+</table>
+<table class="detail wide_list">
+<tr class="list">
+<td class="visibility"><a  href="legend.html"><img  src="public.gif" alt="Public" title="Public"></a></td>
+<td class="itemcode"><a name="Name"></a><code>property <b>Name</b>: string read <a  href="uCharacter.TCharacter.html#fname">fname</a>;</code></td>
+</tr>
+<tr><td colspan="2">
+<p>
+Get Name.</p>
+</td></tr>
+</table>
+<table class="detail wide_list">
+<tr class="list">
+<td class="visibility"><a  href="legend.html"><img  src="public.gif" alt="Public" title="Public"></a></td>
+<td class="itemcode"><a name="HP"></a><code>property <b>HP</b>: string read <a  href="uCharacter.TCharacter.html#GetHP">GetHP</a>;</code></td>
+</tr>
+<tr><td colspan="2">
+<p>
+Get health points.</p>
+</td></tr>
+</table>
+<table class="detail wide_list">
+<tr class="list">
+<td class="visibility"><a  href="legend.html"><img  src="public.gif" alt="Public" title="Public"></a></td>
+<td class="itemcode"><a name="LastAttack"></a><code>property <b>LastAttack</b>: Integer read <a  href="uCharacter.TCharacter.html#pLastAttack">pLastAttack</a>;</code></td>
+</tr>
+<tr><td colspan="2">
+<p>
+Get last attack.</p>
+</td></tr>
+</table>
+<table class="detail wide_list">
+<tr class="list">
+<td class="visibility"><a  href="legend.html"><img  src="public.gif" alt="Public" title="Public"></a></td>
+<td class="itemcode"><a name="LastRoll"></a><code>property <b>LastRoll</b>: Integer read <a  href="uCharacter.TCharacter.html#fLastRoll">fLastRoll</a>;</code></td>
+</tr>
+<tr><td colspan="2">
+<p>
+Get last roll.</p>
+</td></tr>
+</table>
+<table class="detail wide_list">
+<tr class="list">
+<td class="visibility"><a  href="legend.html"><img  src="public.gif" alt="Public" title="Public"></a></td>
+<td class="itemcode"><a name="LastLostHP"></a><code>property <b>LastLostHP</b>: Integer read <a  href="uCharacter.TCharacter.html#fLastRoll">fLastRoll</a>;</code></td>
+</tr>
+<tr><td colspan="2">
+<p>
+Get last HP Lost.</p>
+</td></tr>
+</table>
+<hr noshade size="1"><span class="appinfo"><em>Generated by <a  href="http://pasdoc.sourceforge.net/">PasDoc 0.13.0</a> on 2014-11-03 23:49:38</em>
+</span>
+</td></tr></table></body></html>

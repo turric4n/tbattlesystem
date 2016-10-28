@@ -1,0 +1,38 @@
+DiGraph Classes {
+  TCharacter -> TObject
+  TCharacter [href="uCharacter.TCharacter.html"]
+  TPCharacter -> TCharacter
+  TPCharacter [href="uPCharacter.TPCharacter.html"]
+  TDepletablePoints -> TObject
+  TDepletablePoints [href="uDepletablePoints.TDepletablePoints.html"]
+  TDice -> TObject
+  TDice [href="uDice.TDice.html"]
+  TInventoryItem -> TObject
+  TInventoryItem [href="uInventoryType.TInventoryItem.html"]
+  TArmour -> TInventoryItem
+  TArmour [href="uArmour.TArmour.html"]
+  TShield -> TInventoryItem
+  TShield [href="uArmour.TShield.html"]
+  TWeapon -> TInventoryItem
+  TWeapon [href="uWeapon.TWeapon.html"]
+  TItemLibrary -> TObject
+  TItemLibrary [href="uItemLib.TItemLibrary.html"]
+  TMoneyHolder -> TObject
+  TMoneyHolder [href="uMoneyHolder.TMoneyHolder.html"]
+  TRenormalizablePoints -> TObject
+  TRenormalizablePoints [href="uRenormalizablePoints.TRenormalizablePoints.html"]
+  TCharismaAttrib -> TRenormalizablePoints
+  TCharismaAttrib [href="uAttribs.TCharismaAttrib.html"]
+  TConstitutionAttrib -> TRenormalizablePoints
+  TConstitutionAttrib [href="uAttribs.TConstitutionAttrib.html"]
+  TDexterityAttrib -> TRenormalizablePoints
+  TDexterityAttrib [href="uAttribs.TDexterityAttrib.html"]
+  TIntelligenceAttrib -> TRenormalizablePoints
+  TIntelligenceAttrib [href="uAttribs.TIntelligenceAttrib.html"]
+  TStrengthAttrib -> TRenormalizablePoints
+  TStrengthAttrib [href="uAttribs.TStrengthAttrib.html"]
+  TWisdomAttrib -> TRenormalizablePoints
+  TWisdomAttrib [href="uAttribs.TWisdomAttrib.html"]
+  TStatus -> TObject
+  TStatus [href="uStatus.TStatus.html"]
+}
