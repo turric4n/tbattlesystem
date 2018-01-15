@@ -87,7 +87,7 @@ end;
 constructor TDice.Create(number: Integer; polygonNo: Integer; bonus: Integer);
 begin
   pQuantity:=number;
-  pSides:=number;
+  pSides:=polygonNo;
   pModifier:=bonus;
 end;
 
